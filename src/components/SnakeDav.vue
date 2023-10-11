@@ -4,7 +4,6 @@
     <div class="controls">
       <button id="startButton" @click="startGame">Start</button>
       <button id="pauseButton" @click="pauseGame">Pause</button>
-      <button id="restartButton" @click="restartGame">Restart</button>
     </div>
     <div class="controls">
       <table class="cross-controls">
@@ -210,9 +209,21 @@ export default {
 </script>
 
 <style>
-
-
 .button {
+
+  padding: 19px;
+  border-radius: 16px;
+  background-color: #81ee85;
+  border: transparent;
+  box-shadow: 5px 4px 20px 0px;
+  font-size: 24px;
+  padding: 15px 26px;
+  margin: 0px;
+
+
+}
+
+.button:hover {
 
   padding: 19px;
   border-radius: 16px;
@@ -226,17 +237,53 @@ export default {
 
 }
 
-.button:hover {
+/* <button id="startButton" @click="startGame">Start</button>
+      <button id="pauseButton" @click="pauseGame">Pause</button>
+      <button id="restartButton" @click="restartGame">Restart</button>*/
 
-padding: 19px;
-border-radius: 16px;
-background-color: #1a471c;
+#startButton {
+
+  margin: -2px 108px 15px 15px;
+  width: 83px;
+  height: 27px;
+  background: #37df37;
+  border: transparent;
+  border-radius: 19px;
+  box-shadow: 4px 1px 20px 0px;
+
+}
+
+#startButton:hover {
+
+margin: -2px 108px 15px 15px;
+width: 83px;
+height: 27px;
+background: #218f21;
 border: transparent;
-box-shadow: 5px 4px 20px 0px;
-font-size: 24px;
-padding: 15px 26px;
-margin: 0px;
+border-radius: 19px;
+box-shadow: 4px 1px 20px 0px;
 
+}
+
+#pauseButton {
+  margin: -8px 5px 5px -58px; 
+  width: 83px;
+  height: 27px;
+  background: #f56950;
+  border: transparent;
+  border-radius: 19px;
+  box-shadow: 4px 1px 20px 0px;
+
+}
+
+#pauseButton:hover {
+  margin: -8px 5px 5px -58px; 
+  width: 83px;
+  height: 27px;
+  background: #be523f;
+  border: transparent;
+  border-radius: 19px;
+  box-shadow: 4px 1px 20px 0px;
 
 }
 
@@ -250,7 +297,7 @@ margin: 0px;
   justify-content: center;
   align-items: center;
   margin-top: 10px;
-  margin: -2px 5px 5px -56px;
+  margin: -2px 5px 5px -8px;
 
 }
 
@@ -260,6 +307,12 @@ margin: 0px;
 
 .cross-controls td {
   text-align: center;
+
+}
+
+body{
+
+    background: #0000001f;
 
 }
 
@@ -273,7 +326,8 @@ margin: 0px;
   width: 313px;
   height: 368px;
   border: 2px solid #000;
-  margin: -3px 17px 3px -11px;
+  margin: -3px 17px 3px 14px;
+  background-color: #0000004a;
 }
 
 .score {
