@@ -216,7 +216,6 @@ export default {
 .button {
 
   padding: 19px;
-  border-radius: 72px;
 
 }
 
@@ -230,6 +229,7 @@ export default {
   justify-content: center;
   align-items: center;
   margin-top: 10px;
+  margin: -2px 5px 5px -56px;
 }
 
 .cross-controls {
@@ -250,6 +250,7 @@ export default {
   width: 313px;
   height: 368px;
   border: 2px solid #000;
+  margin: -3px 17px 3px -11px;
 }
 
 .score {
