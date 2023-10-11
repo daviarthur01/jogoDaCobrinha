@@ -2,7 +2,7 @@
     "name": "Nome da Sua Aplicação",
     "short_name": "Nome Curto",
     "description": "Descrição da Sua Aplicação",
-    "start_url": "./",
+    "start_url": "index.html",
     "display": "standalone",
     "background_color": "#ffffff",
     "theme_color": "#000000",
