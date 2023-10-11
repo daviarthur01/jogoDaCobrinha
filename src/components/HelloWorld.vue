@@ -5,17 +5,17 @@
       <table class="cross-controls">
         <tr>
           <td></td>
-          <td><button id="upButton" @click="moveUp">↑</button></td>
+          <td><button id="upButton" class="button" @click="moveUp">↑</button></td>
           <td></td>
         </tr>
         <tr>
-          <td><button id="leftButton" @click="moveLeft">←</button></td>
+          <td><button id="leftButton" class="button" @click="moveLeft">←</button></td>
           <td></td>
-          <td><button id="rightButton" @click="moveRight">→</button></td>
+          <td><button id="rightButton" class="button" @click="moveRight">→</button></td>
         </tr>
         <tr>
           <td></td>
-          <td><button id="downButton" @click="moveDown">↓</button></td>
+          <td><button id="downButton" class="button" @click="moveDown">↓</button></td>
           <td></td>
         </tr>
       </table>
@@ -213,6 +213,13 @@ export default {
 </script>
 
 <style>
+.button {
+
+  padding: 19px;
+  border-radius: 72px;
+
+}
+
 .game-container {
   position: relative;
   text-align: center;
