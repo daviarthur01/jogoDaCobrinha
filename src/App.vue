@@ -1,12 +1,12 @@
 <template>
   <div id="app">
     
-    <SnakeGame />
+    <SnakeGame/>
   </div>
 </template>
 
 <script>
-import SnakeGame from "./components/HelloWorld.vue";
+import SnakeGame from "./components/SnakeDav.vue";
 
 export default {
   components: {

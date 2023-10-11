@@ -2,6 +2,11 @@
   <div class="game-container">
     <canvas id="gameCanvas" width="400" height="400"></canvas>
     <div class="controls">
+      <button id="startButton" @click="startGame">Start</button>
+      <button id="pauseButton" @click="pauseGame">Pause</button>
+      <button id="restartButton" @click="restartGame">Restart</button>
+    </div>
+    <div class="controls">
       <table class="cross-controls">
         <tr>
           <td></td>
@@ -19,14 +24,6 @@
           <td></td>
         </tr>
       </table>
-    </div>
-    <div class="controls">
-      <button id="startButton" @click="startGame">Start</button>
-      <button id="pauseButton" @click="pauseGame">Pause</button>
-      <button id="restartButton" @click="restartGame">Restart</button>
-    </div>
-    <div class="score">
-      Score: {{ score }}
     </div>
   </div>
 </template>
@@ -213,9 +210,33 @@ export default {
 </script>
 
 <style>
+
+
 .button {
 
   padding: 19px;
+  border-radius: 16px;
+  background-color: #4caf50;
+  border: transparent;
+  box-shadow: 5px 4px 20px 0px;
+  font-size: 24px;
+  padding: 15px 26px;
+  margin: 0px;
+
+
+}
+
+.button:hover {
+
+padding: 19px;
+border-radius: 16px;
+background-color: #1a471c;
+border: transparent;
+box-shadow: 5px 4px 20px 0px;
+font-size: 24px;
+padding: 15px 26px;
+margin: 0px;
+
 
 }
 
@@ -230,6 +251,7 @@ export default {
   align-items: center;
   margin-top: 10px;
   margin: -2px 5px 5px -56px;
+
 }
 
 .cross-controls {
@@ -238,12 +260,13 @@ export default {
 
 .cross-controls td {
   text-align: center;
+
 }
 
 .cross-controls button {
   font-size: 24px;
-  padding: 5px 10px;
-  margin: 5px;
+  padding: 15px 26px;
+  margin: 0px;
 }
 
 #gameCanvas {
