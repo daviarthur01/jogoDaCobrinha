@@ -47,16 +47,17 @@ export default {
   mounted() {
     this.canvas = document.getElementById("gameCanvas");
     this.ctx = this.canvas.getContext("2d");
-    this.startGame();
+    // Remova a chamada para startGame aqui
+    // this.startGame();
   },
   methods: {
     startGame() {
       if (!this.gameStarted) {
         this.gameStarted = true;
-        this.gameInterval = setInterval(this.updateGame, 100);
+        this.gameInterval = setInterval(this.updateGame, 200); // Aumente o intervalo para 200ms para reduzir a velocidade
       } else if (this.gamePaused) {
         this.gamePaused = false;
-        this.gameInterval = setInterval(this.updateGame, 100);
+        this.gameInterval = setInterval(this.updateGame, 200);
       }
     },
     pauseGame() {
@@ -210,7 +211,6 @@ export default {
 
 <style>
 .button {
-
   padding: 19px;
   border-radius: 16px;
   background-color: #81ee85;
@@ -219,12 +219,9 @@ export default {
   font-size: 24px;
   padding: 15px 26px;
   margin: 0px;
-
-
 }
 
 .button:hover {
-
   padding: 19px;
   border-radius: 16px;
   background-color: #4caf50;
@@ -233,16 +230,9 @@ export default {
   font-size: 24px;
   padding: 15px 26px;
   margin: 0px;
-
-
 }
 
-/* <button id="startButton" @click="startGame">Start</button>
-      <button id="pauseButton" @click="pauseGame">Pause</button>
-      <button id="restartButton" @click="restartGame">Restart</button>*/
-
 #startButton {
-
   margin: -2px 108px 15px 15px;
   width: 83px;
   height: 27px;
@@ -250,41 +240,36 @@ export default {
   border: transparent;
   border-radius: 19px;
   box-shadow: 4px 1px 20px 0px;
-
 }
 
 #startButton:hover {
-
-margin: -2px 108px 15px 15px;
-width: 83px;
-height: 27px;
-background: #218f21;
-border: transparent;
-border-radius: 19px;
-box-shadow: 4px 1px 20px 0px;
-
+  margin: -2px 108px 15px 15px;
+  width: 83px;
+  height: 27px;
+  background: #218f21;
+  border: transparent;
+  border-radius: 19px;
+  box-shadow: 4px 1px 20px 0px;
 }
 
 #pauseButton {
-  margin: -8px 5px 5px -58px; 
+  margin: -8px 5px 5px -58px;
   width: 83px;
   height: 27px;
   background: #f56950;
   border: transparent;
   border-radius: 19px;
   box-shadow: 4px 1px 20px 0px;
-
 }
 
 #pauseButton:hover {
-  margin: -8px 5px 5px -58px; 
+  margin: -8px 5px 5px -58px;
   width: 83px;
   height: 27px;
   background: #be523f;
   border: transparent;
   border-radius: 19px;
   box-shadow: 4px 1px 20px 0px;
-
 }
 
 .game-container {
@@ -298,7 +283,6 @@ box-shadow: 4px 1px 20px 0px;
   align-items: center;
   margin-top: 10px;
   margin: -2px 5px 5px -8px;
-
 }
 
 .cross-controls {
@@ -307,13 +291,10 @@ box-shadow: 4px 1px 20px 0px;
 
 .cross-controls td {
   text-align: center;
-
 }
 
-body{
-
-    background: #0000001f;
-
+body {
+  background: #0000001f;
 }
 
 .cross-controls button {
